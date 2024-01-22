@@ -1,5 +1,5 @@
 <footer class="footer">
-        <?php include"include/main.php" ?>
+        <?php include"main.php" ?>
     <div class="content-area flex-ss">
         <div class="footer__cpr">
             <div class="footer__cpr-years">© 2024 <?php echo"$row[title]";?></div>

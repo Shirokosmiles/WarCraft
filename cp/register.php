@@ -235,7 +235,7 @@
     <script src="../template/nighthold/js/intlTelInput.min.js"></script>
                     </div>
                     
-                <?php include"../footer.php" ?>
+                <?php include"../include/footer.php" ?>
 
     
 

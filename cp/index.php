@@ -148,6 +148,6 @@ require_once '../include/config.php';
         </div>
     </header>
     <!-- END HEADER -->                
-    <?php include"../footer.php" ?>
+    <?php include"../include/footer.php" ?>
 </body>
 </html>

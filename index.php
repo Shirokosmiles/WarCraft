@@ -122,7 +122,7 @@ require_once 'include/config.php';
                         <div class="header__server-item-description">
                     <div class="header__server-item-info">
                         <div class="header__server-item-name">Alterac <span>GM</span></div>
-                        <div class="header__server-item-text">в игре: <span></span></div>
+                        <div class="header__server-item-text">в игре: <span><?php include"include/gm.php"?></span></div>
                     </div>
                  <!--   <div class="header__server-item-online">
                         <div>
@@ -186,14 +186,14 @@ require_once 'include/config.php';
     </div>
 </section> -->
 
-            <?php include"raiting.php" ?>
+            <?php include"include/raiting.php" ?>
         </div>
 
     </main>
     <!-- END MAIN -->
 
 
-    <?php include"footer.php" ?>
+    <?php include"include/footer.php" ?>
 
 
 
