@@ -4,8 +4,7 @@
         <div class="footer__cpr">
             <div class="footer__cpr-years">© 2024 <?php echo"$row[title]";?></div>
 <div class="nav__item-text">При поддержке <a onclick="window.open('https://extazy-wow.ru', '_blank');" style="color: lightblue; cursor:pointer">Extazy WoW &reg;</a> &amp; <a onclick="window.open('https://warcraft.site', '_blank');" style="color: red; cursor:pointer">Indra &trade;</a> .</div>
-<div class="footer__cpr-text">ДАННЫЕ СЕРВЕРЫ ЯВЛЯЮТСЯ ЭМУЛЯТОРОМ ИГРЫ, СО СВОИМИ ДОРАБОТКАМИ. ИСПОЛЬЗОВАНИЕ
-НАШЕГО СЕРВИСА НОСИТ ИСКЛЮЧИТЕЛЬНО ОЗНАКОМИТЕЛЬНЫЙ ХАРАКТЕР.</div>
+<div class="footer__cpr-text">World of Warcraft © и Blizzard Entertainment © являются товарными знаками или зарегистрированными товарными знаками Blizzard Entertainment в США и/или других странах. Настоящие условия и все связанные с ними материалы, логотипы и изображения защищены авторским правом © Blizzard Entertainment. Этот сайт никоим образом не связан и не одобрен Blizzard Entertainment ©</div>
           
 </footer>
 

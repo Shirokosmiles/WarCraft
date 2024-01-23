@@ -121,8 +121,10 @@ require_once 'include/config.php';
                         </div>
                         <div class="header__server-item-description">
                     <div class="header__server-item-info">
+                        
                         <div class="header__server-item-name">Alterac <span>GM</span></div>
-                        <div class="header__server-item-text">в игре: <span><?php include"include/gm.php"?></span></div>
+                        <div class="header__server-item-text">в игре: <span></span></div>
+                        
                     </div>
                  <!--   <div class="header__server-item-online">
                         <div>
