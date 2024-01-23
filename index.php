@@ -113,7 +113,7 @@ require_once 'include/config.php';
             <!-- END INFORMATION -->
 
              <!-- SERVERS -->
-            <div class="header__server">
+            <!--<div class="header__server">
                                                     <div class="header__server-item-position">
                     <div class="header__server-item">
                         <div class="header__server-item-icon">
@@ -140,7 +140,7 @@ require_once 'include/config.php';
                 </div>
                             </div>
                             </div>
-                            </div>
+                            </div>-->
             <!-- END SERVERS -->
 
 
