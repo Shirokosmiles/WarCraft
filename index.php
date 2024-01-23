@@ -120,35 +120,34 @@ require_once 'include/config.php';
                             <img src="template/indra/images/tn1bZ9rL7z8g3W75oqTy7QMPhYeBEVkA8yfUkY3Y.png" alt="server icon">
                         </div>
                         <div class="header__server-item-description">
-                    <div class="header__server-item-info">
+                     <div class="header__server-item-info">
                         
                         <div class="header__server-item-name">Alterac <span>GM</span></div>
                         <div class="header__server-item-text">в игре: <span></span></div>
                         
                     </div>
-                 <!--   <div class="header__server-item-online">
+                   <div class="header__server-item-online">
                         <div>
                             <div class="header__server-item-online-item">
                                 Онлайн персонажи: <span>2</span>
                             </div>
                             <div class="header__server-item-online-item">
                                 Персонажей 70 уровня: <span>2</span>
-                            </div> -->
+                            </div> 
                             
                         </div>
                     </div>
                 </div>
                             </div>
+                            </div>
+                            </div>
             <!-- END SERVERS -->
 
-      <!--  </div> -->
 
         <div class="header__news">
                         <?php include"include/news.php"?>
             </div>
-            </div>
 
-    </div>
 </header>
 <!-- END HEADER -->
 
