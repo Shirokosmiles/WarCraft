@@ -3039,42 +3039,33 @@ if ($data['class'] == 1)
 <?php     } ?>
                             </div>
                         </div>
-                        <div class="main-rating__content-tab" data-name-tab="exp">
+
+                        <?php
+
+          $sql = "SELECT * FROM `account_premium` ORDER BY `StartTime` DESC LIMIT 10";
+          $res  = $connectAuth->query($sql);
+          ?>
+                        <div class="main-rating__content-tab" data-name-tab="vip">
                             <div class="main-rating__table">
                                 <div class="main-rating__table-row main-rating__table-row--header">
-                                    <div class="main-rating__table-col num">
-                                        <span>№</span>
-                                    </div>
-                                    <div class="main-rating__table-col name">
-                                        <span>Character</span>
-                                    </div>
-                                    <div class="main-rating__table-col level active">
-                                        <span>Level</span>
-                                    </div>
-                                    <div class="main-rating__table-col clan hidable">
-                                        <span>Clan</span>
-                                    </div>
-                                    <div class="main-rating__table-col pvp hidable">
-                                        <span>PVP/PK</span>
-                                    </div>
+                                    <div class="main-rating__table-col name"><span>Аккаунт</span></div>
+                                    <div class="main-rating__table-col level active"><span>Дата начала</span></div>
+                                    <div class="main-rating__table-col clan hidable"><span>Дата окончания</span></div>
                                 </div>
+                                <?php
+                  while ($data = $res->fetch_assoc()) {
+                    $acc_id = $data["id"];
+                    $sql = "SELECT `username` FROM `account` WHERE `id` = $acc_id";
+                    $name_acc = mysqli_fetch_assoc($connectAuth->query($sql));
+                    if ($data["StartTime"] == $data["EndTime"])
+                    
+                    ?>
                                 <div class="main-rating__table-row">
-                                    <div class="main-rating__table-col num">
-                                        <span>1</span>
-                                    </div>
-                                    <div class="main-rating__table-col name">
-                                        <span>Reason</span>
-                                    </div>
-                                    <div class="main-rating__table-col level active">
-                                        <span>54</span>
-                                    </div>
-                                    <div class="main-rating__table-col clan hidable">
-                                        <span>OldSchool</span>
-                                    </div>
-                                    <div class="main-rating__table-col pk hidable">
-                                        <span>0 / 0</span>
-                                    </div>
+                                    <div class="main-rating__table-col num"><span><?php echo ucfirst(strtolower($name_acc["username"])); ?></span></div>
+                                    <div class="main-rating__table-col name"><span><?php echo $data["StartTime"] ?></span></div>
+                                    <div class="main-rating__table-col level active"><span><?php echo $data["EndTime"] ?></span></div>   
                                 </div>
+                                <?php } ?>
                                 </div>
                             </div>
                         </div>
