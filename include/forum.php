@@ -1,7 +1,7 @@
 
 
 <?php
-$conn = mysqli_connect("$host", "$login", "$pass", "$bd_forum");
+$conn = mysqli_connect("$host", "$login", "$pass", "$webdb");
 
 if (!$conn) {
 die("Ошибка: " . mysqli_connect_error());
