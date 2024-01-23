@@ -68,8 +68,8 @@
           $name = $data["name"];
           $race = $data["race"];
           $gender = $data["gender"];
-          $kills_today = $data['todayKills'];
-          $kills = $data['totalKills'];
+          $kills_today = $data["todayKills"];
+          $kills = $data["totalKills"];
           $honor = $data["totalHonorPoints"];
           $money = $data["money"];
           $gold = (int)($money / 10000);
