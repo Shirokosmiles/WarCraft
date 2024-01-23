@@ -2732,7 +2732,7 @@ break;
 
                     </div>
           <?php
-              $sql = "SELECT `name`, `race`, `level`, `class`, `totalKills`, `todayKills`, `totalHonorPoints`, `gender`, `money`, `arenaPoints`, `guid`, `totaltime`, `zone` FROM `characters` WHERE `online` = 1  ORDER BY `todayKills` DESC LIMIT 10";
+              $sql = "SELECT `name`, `race`, `level`, `class`, `totalKills`, `todayKills`, `totalHonorPoints`, `gender`, `money`, `arenaPoints`, `guid`, `totaltime`, `zone` FROM `characters` WHERE `online` = 1  ORDER BY `totalKills` DESC LIMIT 10";
               $res  = $connectChar->query($sql);
               $arrColorsClass = [
                 ["Нет класса", "red"],
