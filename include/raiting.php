@@ -32,7 +32,6 @@
                         <div class="main-rating__content-tab active" data-name-tab="online">
                             <div class="main-rating__table">
                                 <div class="main-rating__table-row main-rating__table-row--header">
-                        <div class="main-rating__table-col num"><span>№</span></div>
                         <div class="main-rating__table-col name"><span>Имя</span></div>
                         <div class="main-rating__table-col name"><span>Раса</span></div>
                         <div class="main-rating__table-col name"><span>Класс</span></div>
@@ -423,97 +422,6 @@ $racename = "Драктир";
         }
 break;
 }
-
-$rank_a = array(
-        0 => 'Нет звания',
-        1 => 'Рядовой',
-        2 => 'Капрал',
-        3 => 'Сержант',
-        4 => 'Старший сержант',
-        5 => 'Старшина',
-        6 => 'Рыцарь',
-        7 => 'Рыцарь-лейтенант',
-        8 => 'Рыцарь-капитан',
-        9 => 'Рыцарь-защитник',
-        10 => 'Лейтенант-командор',
-        11 => 'Командор',
-        12 => 'Маршал',
-        13 => 'Фельдмаршал',
-        14 => 'Главнокомандующий',
-        15 => 'Городской Защитник',
-        16 => 'Страж',
-        17 => 'Богоподобный',
-        18 => 'Королевский гвардеец',
-        19 => 'Страж Короля'
-      );
-    $rank_h = array(
-        0 => 'Нет звания',
-        1 => 'Разведчик',
-        2 => 'Рубака',
-        3 => 'Сержант',
-        4 => 'Старший сержант',
-        5 => 'Старшина',
-        6 => 'Каменный страж',
-        7 => 'Кровавый страж',
-        8 => 'Легионер',
-        9 => 'Центурион',
-        10 => 'Защитник',
-        11 => 'Лейтенант-генерал',
-        12 => 'Генерал',
-        13 => 'Вождь',
-        14 => 'Главнокомандующий',
-        15 => 'Городской Защитник',
-        16 => 'Страж',
-        17 => 'Богоподобный',
-        18 => 'Королевский гвардеец',
-        19 => 'Бог'
-      );
-
-    if ($honor <= 0)
-        $rank = 0;
-    elseif ($honor < 500)
-        $rank = 1;
-    elseif ($honor < 1500)
-        $rank = 2;
-    elseif ($honor < 3000)
-        $rank = 3;
-    elseif ($honor < 5000)
-        $rank = 4;
-    elseif ($honor < 7500)
-        $rank = 5;
-    elseif ($honor < 10000)
-        $rank = 6;
-    elseif ($honor < 15000)
-        $rank = 7;
-    elseif ($honor < 20000)
-        $rank = 8;
-    elseif ($honor < 30000)
-        $rank = 9;
-    elseif ($honor < 40000)
-        $rank = 10;
-    elseif ($honor < 50000)
-        $rank = 11;
-    elseif ($honor < 75000)
-        $rank = 12;
-    elseif ($honor < 100000)
-        $rank = 13;
-    elseif ($honor < 150000)
-        $rank = 14;
-    elseif ($honor < 200000)
-        $rank = 15;
-    elseif ($honor < 300000)
-        $rank = 16;
-    elseif ($honor < 350000)
-        $rank = 17;
-    elseif ($honor < 400000)
-        $rank = 18;
-    else
-        $rank = 19;
-
-    if($data['race'] == 1 || $data['race'] == 3 || $data['race'] == 4 || $data['race'] == 7 || $data['race'] == 11 || $data['race'] == 12 || $data['race'] == 14 || $data['race'] == 16 || $data['race'] == 18 || $data['race'] == 19 || $data['race'] == 21 || $data['race'] == 24 || $data['race'] == 26 || $data['race'] == 27)
-        $rank_title = $rank_a[$rank];
-    else
-        $rank_title = $rank_h[$rank];
 
         $maps = array(
     1 => 'Дун Морог',
@@ -2797,7 +2705,6 @@ $rank_a = array(
               ?>  
 
 <div class="main-rating__table-row">
-        <div class="main-rating__table-col num"><span><?php echo $data["guid"]; ?></span></div>
         <div class="main-rating__table-col name"><span><font color="<?php echo $style_class ?>"><?php echo $data["name"]; ?></font></span></div>
         <div class="main-rating__table-col level hidable"><span><img src="<?php echo  $race; ?>" alt="Расса" width="25px" heidht="25px"></span></div>
         <div class="main-rating__table-col"><span><img src="template/indra/images/class/<?php echo $classArr[1];  ?>.png" width="30" height="30" title="<?php echo $classArr[0];  ?>"></span></div>
@@ -2815,8 +2722,8 @@ $rank_a = array(
                         <div class="main-rating__content-tab" data-name-tab="raiting">
                             <div class="main-rating__table">
                                 <div class="main-rating__table-row main-rating__table-row--header">
-                        <div class="main-rating__table-col num"><span>№</span></div>
                         <div class="main-rating__table-col name"><span>Имя</span></div>
+                        <div class="main-rating__table-col name"><span>Фракция</span></div>
                         <div class="main-rating__table-col name"><span>Убийств</span></div>
                         <div class="main-rating__table-col name"><span>Убийств сегодня</span></div>
                         <div class="main-rating__table-col name"><span>Очки арены</span></div>
@@ -2885,6 +2792,15 @@ $rank_a = array(
           $sec = $sec."c";
           else
           $sec = "";
+          
+          if ($data["race"] == "1" || $data["race"] == "3" || $data["race"] == "4" || $data["race"] == "7" || $data["race"] == "11"|| $data["race"] == "12"|| $data["race"] == "14"|| $data["race"] == "16"|| $data["race"] == "18" || $data["race"] == "19" || $data["race"] == "21" || $data["race"] == "24" || $data["race"] == "26" || $data["race"] == "27") {
+                    $race_src = "template/indra/images/alliance.svg";
+                    $title = "Альянс";
+                  } else {
+                    $race_src = "template/indra/images/horde.svg";
+                    $title = "Орда";
+                  }
+          
 if ($data['class'] == 1)
     {
         $class = 'Воин';
@@ -3028,8 +2944,8 @@ if ($data['class'] == 1)
 
         ?>                    
         <div class="main-rating__table-row">
-            <div class="main-rating__table-col num"><span><?php echo $data["guid"]; ?></font></span></div>
         <div class="main-rating__table-col num"><span><font color="<?php echo $style_class ?>"><?php echo $data["name"]; ?></font></span></div>
+        <div class="main-rating__table-col name"><span><img src="<?php echo  $race_src; ?>" width="30" height="30" title="<?= $title; ?>"></span></div>
         <div class="main-rating__table-col name"><span><?php echo $kills; ?></span></div>
         <div class="main-rating__table-col name"><span><?php echo $kills_today; ?></span></div>
         <div class="main-rating__table-col name"><span><?php echo $data["arenaPoints"] ?></span></div>
@@ -3056,7 +2972,6 @@ if ($data['class'] == 1)
                   while ($data = $res->fetch_assoc()) {
                     $acc_id = $data["id"];
                     $sql = "SELECT `username` FROM `account` WHERE `id` = $acc_id";
-                    $name_acc = mysqli_fetch_assoc($connectAuth->query($sql));
                     if ($data["StartTime"] == $data["EndTime"])
                     
                     ?>
