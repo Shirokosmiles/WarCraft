@@ -2732,7 +2732,7 @@ break;
 
                     </div>
           <?php
-              $sql = "SELECT `name`, `race`, `level`, `class`, `totalKills`, `todayKills`, `totalHonorPoints`, `gender`, `money`, `arenaPoints`, `guid`, `totaltime`, `zone` FROM `characters` WHERE `online` = 1  AND NOT `extra_flags` > 16  ORDER BY `level` DESC LIMIT 10";
+              $sql = "SELECT `name`, `race`, `level`, `class`, `totalKills`, `todayKills`, `totalHonorPoints`, `gender`, `money`, `arenaPoints`, `guid`, `totaltime`, `zone` FROM `characters` WHERE `online` = 1  ORDER BY `todayKills` DESC LIMIT 10";
               $res  = $connectChar->query($sql);
               $arrColorsClass = [
                 ["Нет класса", "red"],
@@ -2972,6 +2972,7 @@ if ($data['class'] == 1)
                   while ($data = $res->fetch_assoc()) {
                     $acc_id = $data["id"];
                     $sql = "SELECT `username` FROM `account` WHERE `id` = $acc_id";
+                    $name_acc = mysqli_fetch_assoc($connectAuth->query($sql));
                     if ($data["StartTime"] == $data["EndTime"])
                     
                     ?>
@@ -3032,7 +3033,7 @@ if ($data['class'] == 1)
                                         <span>Дата блокировки</span>
                                     </div>
                                     <div class="main-rating__table-col rate hidable">
-                                        <span>Причина</span>
+                                        <span>Причина БЛОКИРОВКИ</span>
                                     </div>
                                     <div class="main-rating__table-col side hidable">
                                         <span>Дата разблокировки</span>
@@ -3066,7 +3067,7 @@ while ($ban_data = $res->fetch_assoc()) {
             <span><?php echo ucfirst(strtolower($char_data["name"])); ?></span>
         </div>
         <div class="main-rating__table-col clan active">
-            <span><?php echo date("d.m.Y", $bandate) ?></span>
+            <span><?php echo date("d.m.Y", $ban_data["bandate"]) ?></span>
         </div>
         <div class="main-rating__table-col rate hidable">
             <span><?php echo $banReason ?></span>
