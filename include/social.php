@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("185.63.191.245", "maga", "uT2qT0aT8vuQ", "nighthold");
+$conn = mysqli_connect("$lichdbip", "$lichdbuser", "$lichdbpass", "$webdb");
 if (!$conn) {
   die("Ошибка: " . mysqli_connect_error());
 }

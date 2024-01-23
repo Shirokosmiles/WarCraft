@@ -92,7 +92,7 @@ if (!$_SESSION['admin']) {
 
 
 <?php
-$conn = mysqli_connect("$webdbip", "$webdbuser", "$webdbpass", "$webdb");
+$conn = mysqli_connect("$lichdbip", "$lichdbuser", "$lichdbpass", "$webdb");
 // если запрос GET
 if($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET["id"]))
 {

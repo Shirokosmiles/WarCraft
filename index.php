@@ -169,6 +169,7 @@ require_once 'include/config.php';
                         </div>
                         <div class="server-section-slider-for-item-info-line flex-sbe">
                             <?php include"include/server-info.php"?>
+                        </div>
                     </div>
                             </div>
         </div>

@@ -2,7 +2,7 @@
         <h6 class="overline-title text-primary-alt">Личный кабинет</h6>
     </li>
 <?php
-$conn = mysqli_connect("$webdbip", "$webdbuser", "$webdbpass", "$webdb");
+$conn = mysqli_connect("$lichdbip", "$lichdbuser", "$lichdbpass", "$webdb");
 if (!$conn) {
   die("Ошибка: " . mysqli_connect_error());
 }

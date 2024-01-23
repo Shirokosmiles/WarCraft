@@ -8,7 +8,7 @@ $lichdbuser = "trinity";
 $lichdbpass = "trinity";
 $lichdbauth = "auth";
 $lichdbchar = "characters";
-$port       = "3306";
+$webdb = "warcraft";
 
 
 $host = "localhost"; // Адрес хоста (обычно localhost )
@@ -16,21 +16,11 @@ $login = "trinity"; // Логин от БД
 $pass = "trinity"; // Пароль от БД
 $bd_char = "characters"; // Имя БД персонажей (обычно characters)
 $bd_auth = "auth"; // Имя БД аккаунтов (обычно auth)
+$bd_world = "world";
+$bd_web = "warcraft";
+$bd_forum = "forum";
 $charset = "utf8mb4";
 $port = "8085"; // Порт (обычно 8085)
-
-//web db
-$webdbip = "localhost";
-$webdbuser = "trinity";
-$webdbpass = "trinity";
-$webdb = "warcraft";
-
-
-//forum
-$forumdbip = "localhost";
-$forumdbuser = "trinity";
-$forumdbpass = "trinity";
-$forumdb = "forum";
 
 include 'main.php';
 $forum = "$row[forum]";

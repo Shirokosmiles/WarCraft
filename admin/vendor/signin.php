@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once "../../include/config.php";
-    $connect = mysqli_connect("$webdbip", "$webdbuser", "$webdbpass", "$webdb");
+    $connect = mysqli_connect("$lichdbip", "$lichdbuser", "$lichdbpass", "$webdb");
 
 $id = $_POST['id'];
 $password = $_POST['password'];

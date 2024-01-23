@@ -50,7 +50,7 @@
 
 
 <?php
-$conn = mysqli_connect("$webdbip", "$webdbuser", "$webdbpass", "$webdb");
+$conn = mysqli_connect("$lichdbip", "$lichdbuser", "$lichdbpass", "$webdb");
 if (!$conn) {
   die("Ошибка: " . mysqli_connect_error());
 }
