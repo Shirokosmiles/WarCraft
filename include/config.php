@@ -3,19 +3,21 @@
 // Discord: powerpuff_io
 // Telegram: powerpuff_io
 //wotlk db
-$lichdbip = "localhost";
-$lichdbuser = "trinity";
-$lichdbpass = "trinity";
-$lichdbauth = "auth";
-$lichdbchar = "characters";
-$webdb = "warcraft";
 
+// mysql можешь взять с Extazy-wow для постояной проверки онлайна
+$lichdbip = "185.63.191.245";
+$lichdbuser = "maga";
+$lichdbpass = "uT2qT0aT8vuQ";
+$lichdbauth = "x50_auth";
+$lichdbchar = "x50_characters";
+$port       = "3306";
 
-$host = "localhost"; // Адрес хоста (обычно localhost )
-$login = "trinity"; // Логин от БД
-$pass = "trinity"; // Пароль от БД
-$bd_char = "characters"; // Имя БД персонажей (обычно characters)
-$bd_auth = "auth"; // Имя БД аккаунтов (обычно auth)
+// cюда тоже самое что и выше в конфиге
+$host = "185.63.191.245"; // Адрес хоста (обычно localhost )
+$login = "maga"; // Логин от БД
+$pass = "uT2qT0aT8vuQ"; // Пароль от БД
+$bd_char = "x50_characters"; // Имя БД персонажей (обычно characters)
+$bd_auth = "x50_auth"; // Имя БД аккаунтов (обычно auth)
 $bd_world = "world";
 $bd_web = "warcraft";
 $bd_forum = "forum";
