@@ -1,5 +1,2 @@
 ErrorDocument 404  /404/
 
-
-AddDefaultCharset UTF-8
-AddCharset utf-8 .css .js .json .rss .xml
