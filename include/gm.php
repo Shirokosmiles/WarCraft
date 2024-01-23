@@ -1,12 +1,18 @@
 <?php
+        $host = "185.63.191.245";
+        $db_user = "maga";
+        $db_user_passw = "uT2qT0aT8vuQ";
+        $charset = "utf8mb4";
+        $dbname = "x50_characters";
+
         try {
-            $pdo = new PDO("mysql:host=$host;dbname=$bd_char;charset=$charset", $login, $pass);
+            $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=$charset", $db_user, $db_user_passw);
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $stmt = $pdo->prepare("SELECT c.name, c.class, c.race, a.securitylevel 
+            $stmt = $pdo->prepare("SELECT c.name, c.class, c.race, a.gmlevel 
                                    FROM characters c 
-                                   INNER JOIN auth.account_access a ON a.accountid = c.account 
-                                   WHERE a.securitylevel != 0 AND c.online = 1");
+                                   INNER JOIN acore_auth.account_access a ON a.id = c.account 
+                                   WHERE a.gmlevel != 0 AND c.online = 1");
             $stmt->execute();
 
             if ($stmt->rowCount() > 0) {
@@ -18,12 +24,12 @@
                     1 => "Человек", 2 => "Орк", 3 => "Дворф", 4 => "Ночной Эльф", 5 => "Нежить",
                     6 => "Таурен", 7 => "Гном", 8 => "Тролль", 10 => "Эльф Крови", 11 => "Дреней"
                 ];
-                $securitylevel = [1 => 'Модератор', 2 => 'Хелпер', 3 => 'Гейм Мастер', 4 => 'Администратор'];
+                $gmlevel = [1 => 'Модератор', 2 => 'Хелпер', 3 => 'Гейм Мастер', 4 => 'Администратор'];
 
                 while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                     $name = $row['name'];
                     echo "<tr>";
-                    echo "<td><b>{$name}</b></td>";
+                    echo "<td><b>{$name}<br /></b></td>";
 #                    echo "<td><b>{$gmlevel[$row['gmlevel']]}</b></td>";
                     echo "</tr>";
                 }

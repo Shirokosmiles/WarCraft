@@ -113,7 +113,7 @@ require_once 'include/config.php';
             <!-- END INFORMATION -->
 
              <!-- SERVERS -->
-            <!--<div class="header__server">
+            <div class="header__server">
                                                     <div class="header__server-item-position">
                     <div class="header__server-item">
                         <div class="header__server-item-icon">
@@ -123,24 +123,14 @@ require_once 'include/config.php';
                      <div class="header__server-item-info">
                         
                         <div class="header__server-item-name">Alterac <span>GM</span></div>
-                        <div class="header__server-item-text">в игре: <span></span></div>
+                        <div class="header__server-item-text">в игре: <span><?php include"include/gm.php"?></span></div>
                         
                     </div>
-                   <div class="header__server-item-online">
-                        <div>
-                            <div class="header__server-item-online-item">
-                                Онлайн персонажи: <span>2</span>
-                            </div>
-                            <div class="header__server-item-online-item">
-                                Персонажей 70 уровня: <span>2</span>
-                            </div> 
-                            
-                        </div>
-                    </div>
+                   
                 </div>
                             </div>
                             </div>
-                            </div>-->
+                            </div>
             <!-- END SERVERS -->
 
 
