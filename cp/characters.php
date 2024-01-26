@@ -235,11 +235,7 @@ $connlich->close();
     </div>
 </div>
 
-<script src="../template/nighthold/js/bundle.js"></script>
-<script src="../template/nighthold/js/scripts.js"></script>
-<script src="../template/nighthold/js/ion.rangeSlider.min.js"></script>
-<script src="../template/nighthold/js/jquery-3.4.1.min.js"></script>
-<script src="../template/nighthold/js/main.js"></script>
+<?php include"../include/footer.php" ?>
 
 
 

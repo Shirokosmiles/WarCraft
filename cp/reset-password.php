@@ -211,9 +211,7 @@ echo "<div class='alert alert-fill alert-success alert-icon' role='alert'>
     </div>
 </div>
 
-<script src="../template/nighthold/js/bundle.js"></script>
-<script src="../template/nighthold/js/scripts.js@id=0cdc233a9e6c7e95fcf4"></script>
-<script src="../template/nighthold/js/ion.rangeSlider.min.js"></script>
+<?php include"../include/footer.php" ?>
 
 
 

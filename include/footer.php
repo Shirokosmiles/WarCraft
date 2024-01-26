@@ -18,11 +18,11 @@ function ChangeColor(Element) {
     return false;
 }
 </script>
-<script src="../template/nighthold/js/bundle.js"></script>
-<script src="../template/nighthold/js/scripts.js"></script>
-<script src="../template/nighthold/js/ion.rangeSlider.min.js"></script>
-<script src="../template/nighthold/js/jquery-3.4.1.min.js"></script>
-<script src="../template/nighthold/js/main.js"></script>
+<script src="../template/indra/js/acc/bundle.js"></script>
+<script src="../template/indra/js/acc/scripts.js"></script>
+<script src="../template/indra/js/acc/ion.rangeSlider.min.js"></script>
+<script src="../template/indra/js/acc/jquery-3.4.1.min.js"></script>
+<script src="../template/indra/js/acc/main.js"></script>
 <script src="../template/indra/js/jquery.min.js"></script>
 <script src="../template/indra/js/navigation.js"></script>
 <script src="../template/indra/js/slick.js" type="text/javascript"></script>
